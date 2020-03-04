@@ -13,23 +13,39 @@ function Layout({ children }) {
       </main>
 
       <footer className="bg-blue-700">
-        <nav className="flex justify-between max-w-4xl mx-auto p-4 md:p-8 text-sm">
-          <p className="text-white">
-            Created by{` `}
+        <nav className="flex flex-wrap justify-between max-w-4xl mx-auto p-4 md:p-8 text-sm">
+          <p className="text-center text-white w-full sm:w-1/3">
+            Plugin{"'"}s{' '}
             <a
               className="font-bold no-underline text-white"
-              href="https://bryant.io"
+              href="https://www.npmjs.com/package/gatsby-source-gooten"
             >
-              Taylor Bryant
+              npm
+            </a>
+            {' and '}
+            <a
+              className="font-bold no-underline text-white"
+              href=""
+            >
+              Github
             </a>
           </p>
-
-          <p>
+          <p className="text-center text-white w-full sm:w-1/3">
+            {"Site Source "}
             <a
               className="font-bold no-underline text-white"
-              href="https://github.com/taylorbryant/gatsby-starter-tailwind"
+              href="https://github.com/mrhut10/gatsby-source-gooten"
             >
-              GitHub
+              Github
+            </a>
+          </p>
+          <p className="text-center text-white w-full sm:w-1/3">
+            Creator:{' '}
+            <a
+                className="font-bold no-underline text-white"
+                href="https://twitter.com/ahut10"
+            >
+              @ahut10
             </a>
           </p>
         </nav>
