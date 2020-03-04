@@ -4,9 +4,9 @@ const result = require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Tailwind`,
-    description: `Gatsby starter styled with Tailwind`,
-    author: `@taylorbryant`
+    title: `gatsby-source-gooten plugin`,
+    description: `a first try at an example page of using the gatsby-source-gooten plugin`,
+    author: `@ahut10`
   },
   plugins: [
     "gatsby-plugin-eslint",
