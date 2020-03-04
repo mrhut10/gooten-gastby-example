@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-tailwind",
-  "description": "Gatsby starter styled with Tailwind",
-  "version": "4.0.0",
-  "author": "Taylor Bryant <taylor@bryant.io>",
+  "name": "Gooten-Gatsby-Example",
+  "description": "Gatsby page demonstrating using Gooten source plugin (npm gatsby-source-gooten)",
+  "version": "1.0.0",
+  "author": "Alistair Hutten <ahut10@gmail.com>",
   "dependencies": {
     "gatsby": "2.19.22",
     "gatsby-plugin-manifest": "2.2.42",
@@ -18,9 +18,12 @@
   },
   "keywords": [
     "gatsby",
-    "tailwind",
-    "tailwindcss",
-    "purgecss"
+    "gooten",
+    "print on demand",
+    "ecom",
+    "ecommerce",
+    "dropship",
+    "dropshipping"
   ],
   "license": "MIT",
   "scripts": {
@@ -52,9 +55,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/taylorbryant/gatsby-starter-tailwind"
+    "url": "tba"
   },
   "bugs": {
-    "url": "https://github.com/taylorbryant/gatsby-starter-tailwind/issues"
+    "url": "tba"
   }
 }
