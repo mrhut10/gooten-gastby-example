@@ -1,5 +1,7 @@
 import { graphql, useStaticQuery, Link } from "gatsby";
 import React, { useState } from "react";
+import gootenIcon from '../images/gooten icon.png';
+import GatsbyIcon from '../images/gatsbyIcon.svg';
 
 function Header() {
   const [isExpanded, toggleExpansion] = useState(false);
@@ -16,16 +18,15 @@ function Header() {
   return (
     <header className="bg-teal-700">
       <div className="flex flex-wrap items-center justify-between max-w-4xl mx-auto p-4 md:p-8">
-        <Link className="flex items-center no-underline text-white" to="/">
-          <svg
-            className="fill-current h-8 mr-2 w-8"
+        <Link className="flex flex-wrap items-center no-underline text-white sm:flex-nowrap" to="/">
+          <img
+            className="fill-current h-8 mr-2 w-8 rounded-full"
             height="54"
-            viewBox="0 0 54 54"
-            width="54"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z" />
-          </svg>
+            src={gootenIcon}
+            alt="gooten icon"
+          />
+          <img className="h-8" src={GatsbyIcon}/>
+          <span className="w-8"/>
           <span className="font-bold text-xl tracking-tight">
             {site.siteMetadata.title}
           </span>
@@ -54,10 +55,6 @@ function Header() {
             {
               route: `/`,
               title: `Home`
-            },
-            {
-              route: `/about`,
-              title: `About`
             },
             {
               route: `/contact`,
