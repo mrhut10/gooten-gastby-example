@@ -1,3 +1,7 @@
+const result = require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby Starter Tailwind`,
@@ -37,5 +41,13 @@ module.exports = {
       }
     },
     `gatsby-plugin-offline`
+    {
+      resolve: 'gatsby-source-gooten', //require.resolve('../gatsby-source-gooten'),
+      options: {
+        recipeId: process.env.GOOTEN_RECIPEID,
+        countryCode: process.env.GOOTEN_COUNTRYCODE,
+        currencyCode: process.env.GOOTEN_CURRENCY
+      }
+    }
   ]
 };
