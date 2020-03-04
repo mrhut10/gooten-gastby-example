@@ -17,7 +17,7 @@ function Header() {
 
   return (
     <header className="bg-teal-700">
-      <div className="flex flex-wrap items-center justify-between max-w-4xl mx-auto p-4 md:p-8">
+      <div className="flex lex-wrap-reverse items-center justify-between max-w-4xl mx-auto p-4 md:p-8">
         <Link className="flex flex-wrap items-center no-underline text-white sm:flex-nowrap" to="/">
           <img
             className="fill-current h-8 mr-2 w-8 rounded-full"
