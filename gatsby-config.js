@@ -1,6 +1,6 @@
-const result = require("dotenv").config({
-  path: `.env.${process.env.NODE_ENV}`,
-})
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`
+});
 
 module.exports = {
   siteMetadata: {
@@ -24,6 +24,14 @@ module.exports = {
       }
     },
     {
+      resolve: "gatsby-source-gooten",
+      options: {
+        recipeId: process.env.GOOTEN_RECIPEID,
+        countryCode: process.env.GOOTEN_COUNTRYCODE,
+        currencyCode: process.env.GOOTEN_CURRENCY
+      }
+    },
+    {
       resolve: "gatsby-plugin-postcss",
       options: {
         postCssPlugins: [
@@ -38,15 +46,6 @@ module.exports = {
       options: {
         tailwind: true,
         purgeOnly: [`src/css/style.css`]
-      }
-    },
-    `gatsby-plugin-offline`,
-    {
-      resolve: 'gatsby-source-gooten', //require.resolve('../gatsby-source-gooten'),
-      options: {
-        recipeId: process.env.GOOTEN_RECIPEID,
-        countryCode: process.env.GOOTEN_COUNTRYCODE,
-        currencyCode: process.env.GOOTEN_CURRENCY
       }
     }
   ]
