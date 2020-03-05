@@ -1,5 +1,5 @@
 {
-  "name": "Gooten-Gatsby-Example",
+  "name": "gooten-gatsby-example",
   "description": "Gatsby page demonstrating using Gooten source plugin (npm gatsby-source-gooten)",
   "version": "1.0.0",
   "author": "Alistair Hutten <ahut10@gmail.com>",
@@ -12,7 +12,7 @@
     "gatsby-plugin-purgecss": "4.0.1",
     "gatsby-plugin-react-helmet": "3.1.22",
     "gatsby-plugin-sharp": "2.4.5",
-    "gatsby-source-gooten": "^1.1.0",
+    "gatsby-source-gooten": "^1.1.3",
     "prop-types": "15.7.2",
     "react": "16.12.0",
     "react-dom": "16.13.0",

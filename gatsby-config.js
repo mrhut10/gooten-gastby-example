@@ -9,6 +9,14 @@ module.exports = {
     author: `@ahut10`
   },
   plugins: [
+    {
+      resolve: "gatsby-source-gooten", // require.resolve('../gatsby-source-gooten'),
+      options: {
+        recipeId: process.env.GOOTEN_RECIPEID,
+        countryCode: process.env.GOOTEN_COUNTRYCODE,
+        currencyCode: process.env.GOOTEN_CURRENCY
+      }
+    },
     "gatsby-plugin-eslint",
     `gatsby-plugin-react-helmet`,
     {
@@ -21,14 +29,6 @@ module.exports = {
         theme_color: `#4dc0b5`,
         display: `minimal-ui`,
         icon: `src/images/tailwind-icon.png`
-      }
-    },
-    {
-      resolve: "gatsby-source-gooten",
-      options: {
-        recipeId: process.env.GOOTEN_RECIPEID,
-        countryCode: process.env.GOOTEN_COUNTRYCODE,
-        currencyCode: process.env.GOOTEN_CURRENCY
       }
     },
     {
