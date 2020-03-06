@@ -4,9 +4,9 @@ import propTypes from "prop-types";
 const LineToP = line => <p>{line}</p>;
 
 const QueryStringToCode = ({ queryString, title, children }) => (
-  <div className="text-left container p-sm shadow-lg">
-    <h4>{title}</h4>
-    <div>{children}</div>
+  <div className="p-sm shadow-lg w-full justify-center text-center">
+    <h4 className="font-bold">{title}</h4>
+    <div >{children}</div>
     <pre>
       <code className="text-left language-graphql">
         {queryString.split("\n").map(LineToP)}
