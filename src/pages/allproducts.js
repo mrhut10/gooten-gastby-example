@@ -1,13 +1,13 @@
 import React from "react";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import { graphql, useStaticQuery, Link } from "gatsby";
+import { graphql, useStaticQuery } from "gatsby";
 import QueryStringToCode from "../components/QueryStringToCode";
 import ProductNodeToTile from "../components/ProductNodeToTile";
 
 const productQueryString = `
 {
-  allGootenProduct(limit: 6) {
+  allGootenProduct {
     nodes {
       Name
       Images {
@@ -20,11 +20,7 @@ const productQueryString = `
 }`;
 const productQuery = graphql`
   {
-    totalProducts : allGootenProduct {
-      totalCount
-    }
-    allGootenProduct(limit: 6) {
-      totalCount
+    allGootenProduct {
       nodes {
         Name
         Images {
@@ -37,22 +33,21 @@ const productQuery = graphql`
   }
 `;
 
-function IndexPage() {
+function allProductsPage() {
   const {
-    allGootenProduct: { nodes: ProductNodes },
-    totalProducts
+    allGootenProduct: { nodes: ProductNodes }
   } = useStaticQuery(productQuery);
 
   return (
     <Layout>
       <SEO
         keywords={[`gatsby`, `gooten`, "ecommerce", "dropshipping"]}
-        title="Home"
+        title="All Products"
       />
 
       <section className="text-center">
         <h2 className="bg-yellow-400 text-2xl font-bold inline-block my-8 p-3 align-middle transform rotate-2 md:rotate-5">
-          Integrate Gooten Api into Your Gatsby JS Page
+          All Gooten Products
         </h2>
         <div className="w-full mx-auto">
           <div className="flex flex-wrap">
@@ -76,11 +71,9 @@ function IndexPage() {
           </p>
           <p className="leading-loose">
           </p>
-          <h4 className="font-bold">Example of first 6 products returned from the Gooten API</h4>
+          <h4 className="font-bold">All {ProductNodes.length} Products</h4>
           <div className="flex flex-wrap shadow-lg container w-full p-4 m-md bg-gray-200">
-            <p className="text-right w-full">click <Link className="text-teal-500" to="/allproducts">here</Link> to see all {totalProducts.totalCount} products</p>
             {ProductNodes.map(ProductNodeToTile)}
-            <p className="text-right w-full">click <Link className="text-teal-500" to="/allproducts">here</Link> to see all {totalProducts.totalCount} products</p>
           </div>
           <br/>
           <QueryStringToCode
@@ -91,7 +84,7 @@ function IndexPage() {
             <p>
               This is the GraphQL query used for this page <br />
               want to see full page source? click {''}
-              <a className="text-teal-500" href="https://github.com/mrhut10/gooten-gastby-example/blob/main/src/pages/index.js">here</a>
+              <a className="text-teal-500" href="https://github.com/mrhut10/gooten-gastby-example/blob/main/src/pages/allproducts.js">here</a>
             </p>
           </QueryStringToCode>
         </div>
@@ -100,4 +93,4 @@ function IndexPage() {
   );
 }
 
-export default IndexPage;
+export default allProductsPage;
