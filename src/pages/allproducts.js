@@ -44,13 +44,12 @@ function allProductsPage() {
         keywords={[`gatsby`, `gooten`, "ecommerce", "dropshipping"]}
         title="All Products"
       />
-
       <section className="text-center">
         <h2 className="bg-yellow-400 text-2xl font-bold inline-block my-8 p-3 align-middle transform rotate-2 md:rotate-5">
           All Gooten Products
         </h2>
-        <div className="w-full mx-auto">
-          <div className="flex flex-wrap">
+        <div className="w-full mx-auto p-4">
+          <div className="flex flex-wrap p-4">
             <div className="w-full my-2 p-4 md:w-1/2 background bg-gray-900 text-white transform rotate-2">
               <a className="text-teal-500" href="https://www.gooten.com/">www.gooten.com</a> is a print on demand provider <br />
               You can create products definitions within the product hub, and they will manage shipping to your customers
