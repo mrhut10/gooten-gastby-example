@@ -7,7 +7,7 @@ import ProductNodeToTile from "../components/ProductNodeToTile";
 
 const productQueryString = `
 {
-  allGootenProduct(limit: 12) {
+  allGootenProduct(limit: 6) {
     nodes {
       Name
       Images {
@@ -20,7 +20,7 @@ const productQueryString = `
 }`;
 const productQuery = graphql`
   {
-    allGootenProduct(limit: 12) {
+    allGootenProduct(limit: 6) {
       nodes {
         Name
         Images {
@@ -71,7 +71,7 @@ function IndexPage() {
           </p>
           <p className="leading-loose">
           </p>
-          <h4 className="font-bold">Example of first 12 products returned from the Gooten API</h4>
+          <h4 className="font-bold">Example of first 6 products returned from the Gooten API</h4>
           <div className="flex flex-wrap shadow-lg container w-full p-md m-md">
             {ProductNodes.map(ProductNodeToTile)}
           </div>
