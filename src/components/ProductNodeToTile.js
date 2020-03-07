@@ -4,7 +4,7 @@ import propTypes from "prop-types";
 const maxCharInDescription = 51;
 
 const ProductNodeToTile = ({ Name, Images, ShortDescription }) => (
-  <div className="md:w-1/2 lg:w-1/3 p-4 h-auto">
+  <div className="w-full md:w-1/2 lg:w-1/3 p-4 h-auto">
     <div className="p-2 bg-white shadow-lg hover:shadow-outline">
       <h4 className="m-4 font-bold">{Name}</h4>
       <img className="mx-auto" src={Images[0].Url} />
