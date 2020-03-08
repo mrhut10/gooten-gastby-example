@@ -1,7 +1,8 @@
 import { graphql, useStaticQuery, Link } from "gatsby";
 import React, { useState } from "react";
-import gootenIcon from "../images/gooten icon.png";
-import GatsbyIcon from "../images/gatsbyIcon.svg";
+
+import gootenIcon from "../images/gooten-icon.png";
+import GatsbyIcon from "../images/gatsby-icon.svg";
 
 function Header() {
   const [isExpanded, toggleExpansion] = useState(false);
