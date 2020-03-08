@@ -1,5 +1,5 @@
 import React from "react";
-import propTypes from "prop-types";
+import PropTypes from "prop-types";
 
 const QueryStringToCode = ({ queryString, title, children }) => (
   <div>
@@ -18,11 +18,11 @@ const QueryStringToCode = ({ queryString, title, children }) => (
 );
 
 QueryStringToCode.propTypes = {
-  title: propTypes.string,
-  queryString: propTypes.string,
-  children: propTypes.oneOf([
-    propTypes.element,
-    propTypes.arrayOf(propTypes.element)
+  title: PropTypes.string,
+  queryString: PropTypes.string,
+  children: PropTypes.oneOf([
+    PropTypes.element,
+    PropTypes.arrayOf(PropTypes.element)
   ])
 };
 

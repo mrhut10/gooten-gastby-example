@@ -1,5 +1,5 @@
 import React from "react";
-import propTypes from "prop-types";
+import PropTypes from "prop-types";
 
 import Card from './card';
 
@@ -14,14 +14,14 @@ const ProductNodeToTile = ({ Name, Images, ShortDescription }) => (
   );
 
 ProductNodeToTile.propTypes = {
-  Name: propTypes.string,
-  Images: propTypes.arrayOf(
-    propTypes.shape({
-      ImageTypes: propTypes.arrayOf(propTypes.string),
-      Url: propTypes.string
+  Name: PropTypes.string,
+  Images: PropTypes.arrayOf(
+    PropTypes.shape({
+      ImageTypes: PropTypes.arrayOf(PropTypes.string),
+      Url: PropTypes.string
     })
   ),
-  ShortDescription: propTypes.string
+  ShortDescription: PropTypes.string
 };
 
 export default ProductNodeToTile;
