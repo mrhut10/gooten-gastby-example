@@ -12,7 +12,10 @@ module.exports = {
       ...defaultTheme.rotate
     }
   },
-  variants: {},
+  variants: {
+    margin: ["responsive", "first"],
+    rotate: ['responsive', 'hover', 'even'],
+  },
   // https://github.com/tailwindcss/custom-forms
   plugins: [
     plugin(function({ addUtilities }) {
