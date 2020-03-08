@@ -16,7 +16,6 @@ module.exports = {
     margin: ["responsive", "first"],
     rotate: ['responsive', 'hover', 'even'],
   },
-  // https://github.com/tailwindcss/custom-forms
   plugins: [
     plugin(function({ addUtilities }) {
       const newUtilities = {
@@ -27,9 +26,9 @@ module.exports = {
           overflow: "hidden"
         }
       };
-
       addUtilities(newUtilities);
     }),
+    // https://github.com/tailwindcss/custom-forms
     require("@tailwindcss/custom-forms")
   ]
 };
