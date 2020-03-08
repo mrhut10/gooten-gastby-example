@@ -58,6 +58,10 @@ function Header() {
               title: `Home`
             },
             {
+              route: `/allproducts`,
+              title: `All Products`
+            },
+            {
               route: `/contact`,
               title: `Contact`
             }
