@@ -1,3 +1,5 @@
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`
 });
@@ -25,8 +27,8 @@ module.exports = {
         name: `gatsby-starter-tailwind`,
         short_name: `starter`,
         start_url: `/`,
-        background_color: `#ffffff`,
-        theme_color: `#4dc0b5`,
+        background_color: defaultTheme.colors.white,
+        theme_color: defaultTheme.colors.teal[600],
         display: `minimal-ui`,
         icon: `src/images/tailwind-icon.png`
       }
