@@ -17,7 +17,7 @@ function Header() {
   `);
 
   return (
-    <header className="sticky top-0 z-10 bg-gray-100 shadow sm:shadow-none sm:relative">
+    <header className="sticky top-0 z-10 bg-white shadow sm:bg-gray-100 sm:shadow-none sm:relative">
       <div className="flex flex-wrap items-center justify-between max-w-4xl p-4 mx-auto md:p-8">
         <Link
           className="flex flex-wrap items-center font-medium text-gray-800 transition duration-150 ease-in-out transform sm:flex-nowrap hover:text-gray-600 focus:underline focus:outline-none"
