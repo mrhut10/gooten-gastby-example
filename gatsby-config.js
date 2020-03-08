@@ -10,14 +10,14 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: "gatsby-source-gooten", // require.resolve('../gatsby-source-gooten'),
+      resolve: `gatsby-source-gooten`,
       options: {
         recipeId: process.env.GOOTEN_RECIPEID,
         countryCode: process.env.GOOTEN_COUNTRYCODE,
         currencyCode: process.env.GOOTEN_CURRENCY
       }
     },
-    "gatsby-plugin-eslint",
+    `gatsby-plugin-eslint`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-manifest`,
@@ -32,7 +32,7 @@ module.exports = {
       }
     },
     {
-      resolve: "gatsby-plugin-postcss",
+      resolve: `gatsby-plugin-postcss`,
       options: {
         postCssPlugins: [
           require(`tailwindcss`)(`./tailwind.config.js`),
