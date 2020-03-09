@@ -1,5 +1,9 @@
 # gooten-gastby-example
 
+Live Preview avaliable at
+[https://gatsby-gooten-example-page.netlify.com/](https://gatsby-gooten-example-page.netlify.com/)
+
+
 Example gastby site using http://www.gooten.com data
 
 
