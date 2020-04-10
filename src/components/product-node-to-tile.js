@@ -4,7 +4,7 @@ import propTypes from "prop-types";
 const LineToP = line => <p>{line}</p>;
 
 const QueryStringToCode = ({ queryString, title, children }) => (
-  <div className="p-sm shadow-lg w-full justify-center text-center">
+  <div className="justify-center w-full text-center shadow-lg">
     <h4 className="font-bold">{title}</h4>
     <div >{children}</div>
     <pre>
