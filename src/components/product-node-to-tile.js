@@ -1,27 +1,27 @@
 import React from "react";
-import propTypes from "prop-types";
+import PropTypes from "prop-types";
 
-const LineToP = line => <p>{line}</p>;
+import Card from './card';
 
-const QueryStringToCode = ({ queryString, title, children }) => (
-  <div className="justify-center w-full text-center shadow-lg">
-    <h4 className="font-bold">{title}</h4>
-    <div >{children}</div>
-    <pre>
-      <code className="text-left language-graphql">
-        {queryString.split("\n").map(LineToP)}
-      </code>
-    </pre>
-  </div>
-);
+const ProductNodeToTile = ({ Name, Images, ShortDescription }) => (
+  <Card heading={Name}>
+      <p className="max-w-2xl mt-1 text-sm leading-5 text-gray-600 line-clamp">
+      {ShortDescription}
+    </p>
+    <br />
+    <img className="mx-auto mt-auto" src={Images[0].Url} />
+  </Card>
+  );
 
-QueryStringToCode.propTypes = {
-  title: propTypes.string,
-  queryString: propTypes.string,
-  children: propTypes.oneOf([
-    propTypes.element,
-    propTypes.arrayOf(propTypes.element)
-  ])
+ProductNodeToTile.propTypes = {
+  Name: PropTypes.string,
+  Images: PropTypes.arrayOf(
+    PropTypes.shape({
+      ImageTypes: PropTypes.arrayOf(PropTypes.string),
+      Url: PropTypes.string
+    })
+  ),
+  ShortDescription: PropTypes.string
 };
 
-export default QueryStringToCode;
+export default ProductNodeToTile;
