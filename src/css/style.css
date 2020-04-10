@@ -3,3 +3,9 @@
 @tailwind components;
 /* purgecss end ignore */
 @tailwind utilities;
+
+/* I couldn't get the hover and nth-child pseudo-selectors to stack so I hacked this together temporarily */
+/* Every second card will rotate clockwise on hover instead of anticlockwise */
+.hover\:-rotate-2:nth-child(2n):hover {
+  --transform-rotate: 2deg;
+}

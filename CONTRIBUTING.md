@@ -1,4 +1,4 @@
-## Contributing
+# Contributing
 
 Hey, there! 👋 Any and all contributions are welcome.
 

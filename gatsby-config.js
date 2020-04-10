@@ -1,3 +1,5 @@
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`
 });
@@ -10,29 +12,29 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: "gatsby-source-gooten", // require.resolve('../gatsby-source-gooten'),
+      resolve: `gatsby-source-gooten`,
       options: {
         recipeId: process.env.GOOTEN_RECIPEID,
         countryCode: process.env.GOOTEN_COUNTRYCODE,
         currencyCode: process.env.GOOTEN_CURRENCY
       }
     },
-    "gatsby-plugin-eslint",
+    `gatsby-plugin-eslint`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-tailwind`,
+        name: `gatsby-source-gooten`,
         short_name: `starter`,
         start_url: `/`,
-        background_color: `#ffffff`,
-        theme_color: `#4dc0b5`,
+        background_color: defaultTheme.colors.white,
+        theme_color: defaultTheme.colors.teal[600],
         display: `minimal-ui`,
         icon: `src/images/tailwind-icon.png`
       }
     },
     {
-      resolve: "gatsby-plugin-postcss",
+      resolve: `gatsby-plugin-postcss`,
       options: {
         postCssPlugins: [
           require(`tailwindcss`)(`./tailwind.config.js`),

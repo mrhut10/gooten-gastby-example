@@ -1,35 +1,29 @@
 import React from "react";
-import propTypes from "prop-types";
+import PropTypes from "prop-types";
 
-const maxCharInDescription = 51;
-
-const ProductNodeToTile = ({ Name, Images, ShortDescription }) => (
-  <div className="w-full md:w-1/2 lg:w-1/3 p-4 h-auto">
-    <div className="p-2 bg-white shadow-lg hover:shadow-outline">
-      <h4 className="m-4 font-bold">{Name}</h4>
-      <img className="mx-auto" src={Images[0].Url} />
-      <p>
-        {ShortDescription.substring(
-          0,
-          (ShortDescription.length >= maxCharInDescription
-            ? maxCharInDescription
-            : ShortDescription.length) - 1
-        )}
-        {ShortDescription.length >= maxCharInDescription ? " ... " : ""}
-      </p>
+const QueryStringToCode = ({ queryString, title, children }) => (
+  <div>
+    <h3 className="text-2xl font-medium text-gray-800 sm:text-center">
+      {title}
+    </h3>
+    <div className="max-w-md sm:text-center sm:mx-auto">{children}</div>
+    <div className="px-4 py-5 mt-12 text-gray-800 bg-white shadow sm:rounded-lg">
+      <pre className="font-mono text-sm text-left language-graphql">
+        {queryString.split("\n").map((line, index) => (
+          <p key={index}>{line}</p>
+        ))}
+      </pre>
     </div>
   </div>
 );
 
-ProductNodeToTile.propTypes = {
-  Name: propTypes.string,
-  Images: propTypes.arrayOf(
-    propTypes.shape({
-      ImageTypes: propTypes.arrayOf(propTypes.string),
-      Url: propTypes.string
-    })
-  ),
-  ShortDescription: propTypes.string
+QueryStringToCode.propTypes = {
+  title: PropTypes.string,
+  queryString: PropTypes.string,
+  children: PropTypes.oneOf([
+    PropTypes.element,
+    PropTypes.arrayOf(PropTypes.element)
+  ])
 };
 
-export default ProductNodeToTile;
+export default QueryStringToCode;
