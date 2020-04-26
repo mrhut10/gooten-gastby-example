@@ -2,8 +2,8 @@ import React from "react";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { graphql, useStaticQuery, Link } from "gatsby";
-import QueryStringToCode from "../components/QueryStringToCode";
-import ProductNodeToTile from "../components/ProductNodeToTile";
+import QueryStringToCode from "../components/query-string-to-code";
+import ProductNodeToTile from "../components/product-node-to-tile";
 
 const productQueryString = `
 {
